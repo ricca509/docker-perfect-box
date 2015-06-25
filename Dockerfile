@@ -2,6 +2,10 @@ FROM ubuntu:trusty
 
 MAINTAINER Riccardo Coppola <ricca509@gmail.com>
 
+VOLUME ["/development"]
+
+WORKDIR /development
+
 # Install packages
 RUN \
     apt-get update && \
