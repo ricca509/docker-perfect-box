@@ -6,7 +6,7 @@ It contains:
  - zsh with oh-my-zsh
  - git
  - io.js
- - phantomjs, grunt, gulp
+ - phantomjs, grunt, gulp, bower
  - google-chrome-stable
 
 ## How to use the image

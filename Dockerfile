@@ -23,7 +23,7 @@ RUN \
 
 # Install node packages
 RUN \
-    npm install -g phantomjs grunt-cli gulp
+    npm install -g phantomjs grunt-cli gulp bower
 
 # Set up oh-my-zsh
 RUN \
