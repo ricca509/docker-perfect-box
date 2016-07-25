@@ -17,16 +17,22 @@ RUN \
     | apt-key add - && \
     echo "deb http://dl.google.com/linux/chrome/deb/ stable main" \
     > /etc/apt/sources.list.d/google.list && \
-    curl -sL https://deb.nodesource.com/setup_iojs_2.x | \
+    wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.3/install.sh | bash && \
     sudo bash - && \
-    apt-get install -y x11vnc xvfb iojs google-chrome-stable
+    . /root/.bashrc && \
+    nvm install stable && \
+    nvm alias default stable && \
+    nvm use default && \
+    apt-get install -y x11vnc xvfb
 
 # Install node packages
-RUN \
-    npm install -g phantomjs grunt-cli gulp bower
+# RUN \
+#     npm install -g phantomjs
 
 # Set up oh-my-zsh
 RUN \
-    curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh || true
+    curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh || true && \
+    echo "export NVM_DIR=~/.nvm" >> ~/.zshrc && \
+    echo "[ -s ~/.nvm/nvm.sh ] && . ~/.nvm/nvm.sh" >> ~/.zshrc
 
 CMD ["/usr/bin/zsh"]
