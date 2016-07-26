@@ -6,7 +6,7 @@ It contains:
  - zsh with oh-my-zsh
  - git
  - node.js
- - phantomjs
+ - perl
 
  All the rest should be an internal dependency of your project.
 
