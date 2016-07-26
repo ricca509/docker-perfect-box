@@ -5,9 +5,10 @@ A (work in progress) web development docker image.
 It contains:
  - zsh with oh-my-zsh
  - git
- - io.js
- - phantomjs, grunt, gulp, bower
- - google-chrome-stable
+ - node.js
+ - perl
+
+ All the rest should be an internal dependency of your project.
 
 ## How to use the image
 
