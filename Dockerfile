@@ -1,4 +1,4 @@
-FROM debian:8.5
+FROM phusion/baseimage
 
 MAINTAINER Riccardo Coppola <ricca509@gmail.com>
 
