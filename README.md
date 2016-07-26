@@ -20,13 +20,13 @@ and run the command.
 ### Example: run `npm install` in your project
 
 ```
-docker run -ti -v /path/to/your/project:/development ricca509/perfect_box npm install
+docker run -ti -v /path/to/your/project:/development ricca509/perfect-box npm install
 ```
 
 If you move inside your project folder you can then use:
 
 ```
-docker run -ti -v $(pwd):/development ricca509/perfect_box npm install
+docker run -ti -v $(pwd):/development ricca509/perfect-box npm install
 ```
 
 ### Setup an alias
@@ -34,7 +34,7 @@ If you always move inside your project folder before running any command,
 you can setup a generic alias:
 
 ```
-alias docker-box='docker run -ti --rm -v $(pwd):/development ricca509/perfect_box'
+alias docker-box='docker run -ti --rm -v $(pwd):/development ricca509/perfect-box'
 ```
 
 and then use:
