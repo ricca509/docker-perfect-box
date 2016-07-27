@@ -22,10 +22,6 @@ RUN \
     libsqlite3-dev libfontconfig1-dev libicu-dev \
     libfreetype6 libssl-dev \
     libpng-dev libjpeg-dev python libx11-dev libxext-dev && \
-    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub \
-    | apt-key add - && \
-    echo "deb http://dl.google.com/linux/chrome/deb/ stable main" \
-    > /etc/apt/sources.list.d/google.list && \
     wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.3/install.sh | bash && \
     bash - && \
     . /root/.bashrc && \

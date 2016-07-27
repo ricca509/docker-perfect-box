@@ -1,4 +1,4 @@
-#docker-perfect-box
+# docker-perfect-box
 
 A (work in progress) web development docker image.
 
@@ -12,7 +12,7 @@ It contains:
 
 ## How to use the image
 
-You will run commands from within your Docker container.
+You will run commands from within your Docker container. 
 
 You want to mount your development (project) folder as a volume
 and run the command.
