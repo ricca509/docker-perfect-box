@@ -1,6 +1,8 @@
 # docker-perfect-box
 
-A (work in progress) web development docker image.
+[![](https://images.microbadger.com/badges/image/ricca509/perfect-box.svg)](https://microbadger.com/images/ricca509/perfect-box "Get your own image badge on microbadger.com")
+
+A web development docker image.
 
 It contains:
  - zsh with oh-my-zsh
