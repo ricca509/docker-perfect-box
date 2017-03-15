@@ -9,6 +9,7 @@ WORKDIR /development
 ENV NVM_DIR         /root/.nvm
 ENV NVM_BIN_DIR     /usr/local/nvm
 ENV NODE_VERSION    6.10.0
+ENV YARN_VERSION    0.21.3
 ENV NVM_PATH        $NVM_DIR/versions/node/v$NODE_VERSION/lib/node
 ENV NVM_BIN         $NVM_DIR/versions/node/v$NODE_VERSION/bin
 ENV NODE_PATH       $NVM_BIN_DIR/v$NODE_VERSION/lib/node_modules
@@ -27,7 +28,8 @@ RUN \
     . /root/.bashrc && \
     nvm install $NODE_VERSION && \
     nvm alias default $NODE_VERSION && \
-    nvm use default
+    nvm use default && \
+    npm i yarn@${YARN_VERSION} -g
 
 # Set up oh-my-zsh
 RUN \

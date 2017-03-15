@@ -14,7 +14,7 @@ It contains:
 
 ## How to use the image
 
-You will run commands from within your Docker container. 
+You will run commands from within your Docker container.
 
 You want to mount your development (project) folder as a volume
 and run the command.
@@ -22,13 +22,20 @@ and run the command.
 ### Example: run `npm install` in your project
 
 ```
-docker run -ti -v /path/to/your/project:/development ricca509/perfect-box npm install
+docker run --rm -ti -v /path/to/your/project:/development ricca509/perfect-box npm install
 ```
 
 If you move inside your project folder you can then use:
 
 ```
-docker run -ti -v $(pwd):/development ricca509/perfect-box npm install
+docker run --rm -ti -v $(pwd):/development ricca509/perfect-box npm install
+```
+or, in Powershell
+
+```
+$here = ($pwd.Path -replace '\\','/' -replace 'C:','//c'); docker run --rm -ti -v ${here}:/development ricca509/perfect-box npm install
+
+
 ```
 
 ### Setup an alias
