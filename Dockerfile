@@ -6,10 +6,12 @@ VOLUME ["/development"]
 
 WORKDIR /development
 
-ENV NVM_DIR         /root/.nvm
-ENV NVM_BIN_DIR     /usr/local/nvm
 ENV NODE_VERSION    6.10.0
 ENV YARN_VERSION    0.21.3
+ENV NVM_VERSION     0.33.1
+
+ENV NVM_DIR         /root/.nvm
+ENV NVM_BIN_DIR     /usr/local/nvm
 ENV NVM_PATH        $NVM_DIR/versions/node/v$NODE_VERSION/lib/node
 ENV NVM_BIN         $NVM_DIR/versions/node/v$NODE_VERSION/bin
 ENV NODE_PATH       $NVM_BIN_DIR/v$NODE_VERSION/lib/node_modules
@@ -23,7 +25,7 @@ RUN \
     libsqlite3-dev libfontconfig1-dev libicu-dev \
     libfreetype6 libssl-dev \
     libpng-dev libjpeg-dev python libx11-dev libxext-dev && \
-    wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash && \
+    wget -qO- https://raw.githubusercontent.com/creationix/nvm/v${NVM_VERSION}/install.sh | bash && \
     bash - && \
     . /root/.bashrc && \
     nvm install $NODE_VERSION && \
