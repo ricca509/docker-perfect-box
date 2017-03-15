@@ -31,7 +31,7 @@ RUN \
     nvm install $NODE_VERSION && \
     nvm alias default $NODE_VERSION && \
     nvm use default && \
-    npm i yarn@${YARN_VERSION} -g
+    curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION
 
 # Set up oh-my-zsh
 RUN \
